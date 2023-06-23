@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang='zh-CN'>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.8.3/jquery.min.js"></script>
+<!-- 雪花特效 -->
+<script type="text/javascript" src="\js\snow.js"></script>
+
+<head>
+  <meta name="generator" content="Hexo 6.3.0">
+  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
+  <meta charset="utf-8">
+  
+
+  <meta http-equiv='x-dns-prefetch-control' content='on' />
+  <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
+  <link rel="preconnect" href="https://gcore.jsdelivr.net" crossorigin>
+  <link rel='dns-prefetch' href='//unpkg.com'>
+
+  <meta name="renderer" content="webkit">
+  <meta name="force-rendering" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="HandheldFriendly" content="True" >
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="theme-color" content="#f8f8f8">
+  
+  <title>液压常用公式汇总 - 穿越時空的貓</title>
+
+  
+    <meta name="description" content="主要对液压泵、马达、油缸的一些计算公式进行了整理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="液压常用公式汇总">
+<meta property="og:url" content="https://settingsun.site/2023/06/24/%E6%B6%B2%E5%8E%8B%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E6%B1%87%E6%80%BB/index.html">
+<meta property="og:site_name" content="穿越時空的貓">
+<meta property="og:description" content="主要对液压泵、马达、油缸的一些计算公式进行了整理">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623144959967.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145027469.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145147556.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145508113.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145653456.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145751487.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145908311.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150405711.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150553143.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150650826.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150803406.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150902441.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623151201232.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623151755576.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623152425335.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623152504705.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623153822814.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623153958964.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623154051950.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623154323017.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623154339475.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623163815777.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164012721.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164246371.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164508153.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164832712.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164917874.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164957932.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165056800.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165134875.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165300816.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165335097.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165454766.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165602800.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165623980.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623163312720.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623163345368.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623144813900.png">
+<meta property="article:published_time" content="2023-06-23T16:00:00.000Z">
+<meta property="article:modified_time" content="2023-06-23T09:09:47.499Z">
+<meta property="article:author" content="ToBe">
+<meta property="article:tag" content="液压">
+<meta property="article:tag" content="公式">
+<meta property="article:tag" content="设计计算">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623144959967.png">
+  
+  
+  
+  <meta name="keywords" content="液压,公式,设计计算">
+
+  <!-- feed -->
+  
+
+  
+    
+<link rel="stylesheet" href="/css/main.css">
+
+  
+
+  
+    <link rel="shortcut icon" href="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/blog/logo.jpg">
+  
+
+  
+
+  
+
+
+  
+    
+      <link rel="stylesheet" href="https://cdn.staticfile.org/lxgw-wenkai-screen-webfont/1.6.0/lxgwwenkaiscreen.css" media="all" />
+    
+  
+</head>
+
+<body>
+<!--动态线条背景-->
+<!--<script type="text/javascript"
+        color="220,220,220" opacity='0.7' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>-->
+  
+
+
+
+
+  <div class='l_body' id='start'>
+    <aside class='l_left' layout='post'>
+    
+
+  
+
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/avatar.jpg" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/image/2659360.svg';"></a><a class="title" href="/"><div class="main" ff="title">穿越時空的貓</div><div class="sub normal cap">千山飞雪</div><div class="sub hover cap" style="opacity:0"> 除却君身三尺雪，天下谁人配白衣</div></a></div>
+
+<nav class="menu dis-select"><a class="nav-item" href="/">首页</a><a class="nav-item" href="/wiki/">文章</a><a class="nav-item" href="/about/">关于</a><a class="nav-item" href="/friends/">友链</a></nav>
+</header>
+
+
+<div class="widgets">
+<widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
+
+
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">液压常用公式汇总</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link"><span class="toc-text"> </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6"><span class="toc-text">1.流体力学</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E4%BD%93%E4%B8%BB%E8%A6%81%E7%89%A9%E7%90%86%E6%80%A7%E8%B4%A8%E5%85%AC%E5%BC%8F"><span class="toc-text">流体主要物理性质公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E4%BD%93%E9%9D%99%E5%8A%9B%E5%AD%A6"><span class="toc-text">流体静力学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B5%81%E4%BD%93%E5%8A%A8%E5%8A%9B%E5%AD%A6"><span class="toc-text">流体动力学</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%9B%B7%E8%AF%BA%E6%95%B0%E3%80%81%E6%B5%81%E6%80%81%E3%80%81%E5%8E%8B%E5%8A%9B%E6%8D%9F%E5%A4%B1"><span class="toc-text">雷诺数、流态、压力损失</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B1%80%E9%83%A8%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0%E5%92%8C%E6%B2%BF%E7%A8%8B%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">局部阻力系数和沿程阻力系数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9C%86%E7%AE%A1%E6%B2%BF%E7%A8%8B%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">圆管沿程阻力系数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%96%B0%E7%AE%A1%E5%86%85%E5%A3%81%E7%BB%9D%E5%AF%B9%E7%B2%97%E7%B3%99%E5%BA%A6"><span class="toc-text">新管内壁绝对粗糙度</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E9%81%93%E5%85%A5%E5%8F%A3%E5%B1%80%E9%83%A8%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">管道入口局部阻力系数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E9%81%93%E5%87%BA%E5%8F%A3%E5%B1%80%E9%83%A8%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">管道出口局部阻力系数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E9%81%93%E6%89%A9%E5%A4%A7%E5%A4%84%E5%B1%80%E9%83%A8%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">管道扩大处局部阻力系数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%AE%A1%E9%81%93%E7%BC%A9%E5%B0%8F%E5%A4%84%E5%B1%80%E9%83%A8%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">管道缩小处局部阻力系数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%BC%AF%E7%AE%A1%E5%B1%80%E9%83%A8%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">弯管局部阻力系数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%86%E6%94%AF%E7%AE%A1%E5%B1%80%E9%83%A8%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">分支管局部阻力系数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%A4%E8%B4%AF%E9%92%BB%E5%AD%94%E9%80%9A%E9%81%93%E5%B1%80%E9%83%A8%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">交贯钻孔通道局部阻力系数</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%98%80%E5%8F%A3%E5%B1%80%E9%83%A8%E9%98%BB%E5%8A%9B%E7%B3%BB%E6%95%B0"><span class="toc-text">阀口局部阻力系数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B0%8F%E5%AD%94%E6%B5%81%E9%87%8F%E5%85%AC%E5%BC%8F"><span class="toc-text">小孔流量公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%B9%B3%E8%A1%8C%E5%B9%B3%E6%9D%BF%E9%97%B4%E7%BC%9D%E9%9A%99%E6%B5%81%E5%85%AC%E5%BC%8F"><span class="toc-text">平行平板间缝隙流公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%8E%AF%E5%BD%A2%E7%BC%9D%E9%9A%99%E6%B5%81%E5%85%AC%E5%BC%8F"><span class="toc-text">环形缝隙流公式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B6%B2%E5%8E%8B%E5%86%B2%E5%87%BB%E5%85%AC%E5%BC%8F"><span class="toc-text">液压冲击公式</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#3-%E6%B6%B2%E5%8E%8B%E7%BC%B8"><span class="toc-text">3.液压缸</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%85%81%E8%AE%B8%E8%A1%8C%E7%A8%8BS%E5%92%8C%E8%AE%A1%E7%AE%97%E9%95%BF%E5%BA%A6L"><span class="toc-text">允许行程S和计算长度L</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%B8%E7%AD%92%E8%AE%A1%E7%AE%97"><span class="toc-text">缸筒计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%B4%BB%E5%A1%9E%E6%9D%86%E8%AE%A1%E7%AE%97"><span class="toc-text">活塞杆计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%AF%BC%E5%90%91%E5%A5%97%E8%AE%A1%E7%AE%97"><span class="toc-text">导向套计算</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%BC%93%E5%86%B2%E8%A3%85%E7%BD%AE%E8%AE%A1%E7%AE%97"><span class="toc-text">缓冲装置计算</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-%E6%B6%B2%E5%8E%8B%E6%B3%B5%E5%92%8C%E6%B6%B2%E5%8E%8B%E9%A9%AC%E8%BE%BE"><span class="toc-text">4.液压泵和液压马达</span></a></li></ol></div></div></widget>
+
+
+</div>
+<footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/ToBePedestrian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/social/github.jpg"/></a><a class="social" href="https://music.163.com/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/social/wyy.jpg"/></a><a class="social" href="https://gitee.com/BlackCatTango" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/social/gitee.jpg"/></a></div></footer>
+
+    </aside>
+    <div class='l_main'>
+      
+
+      
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%B6%B2%E5%8E%8B/">液压</a> <span class="sep"></span> <a class="cap breadcrumb-link" href="/categories/%E6%B6%B2%E5%8E%8B/%E5%85%AC%E5%BC%8F/">公式</a></div><div id="post-meta">发布于&nbsp;<time datetime="2023-06-23T16:00:00.000Z">2023-06-24</time><br />🔥 阅读: <span id="busuanzi_value_page_pv">-</span></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>液压常用公式汇总</span></h1>
+<h1 id="液压常用公式汇总"><a href="#液压常用公式汇总" class="headerlink" title="液压常用公式汇总"></a>液压常用公式汇总</h1><blockquote>
+<p>来源：《机械设计手册》成大先 </p>
+<p>文章学习整理：ToBe (穿越时空的猫)</p>
+<p>风起于青萍之末，浪成于微澜之间。跌谷底也要开花，沉海底也要望月。</p>
+</blockquote>
+<h2 id=""><a href="#" class="headerlink" title=" "></a> </h2><h2 id="1-流体力学"><a href="#1-流体力学" class="headerlink" title="1.流体力学"></a>1.流体力学</h2><h3 id="流体主要物理性质公式"><a href="#流体主要物理性质公式" class="headerlink" title="流体主要物理性质公式"></a>流体主要物理性质公式</h3><blockquote>
+<p>风吹枝头影飘落，人随风去情自留。呓言寐语随风吟，风止山野意难平。</p>
+</blockquote>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623144959967.png" alt="image-20230623144959967" style="zoom:50%;" /></p>
+<h3 id="流体静力学"><a href="#流体静力学" class="headerlink" title="流体静力学"></a>流体静力学</h3><blockquote>
+<p>怀疑一切与相信一切一样简单（都是放弃思考）</p>
+</blockquote>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145027469.png" alt="image-20230623145027469" style="zoom:50%;" /></p>
+<h3 id="流体动力学"><a href="#流体动力学" class="headerlink" title="流体动力学"></a>流体动力学</h3><blockquote>
+<p>何须叹别余晖尽，人间华灯才初上</p>
+</blockquote>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145147556.png" alt="image-20230623145147556" style="zoom:50%;" /></p>
+<h3 id="雷诺数、流态、压力损失"><a href="#雷诺数、流态、压力损失" class="headerlink" title="雷诺数、流态、压力损失"></a>雷诺数、流态、压力损失</h3><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145508113.png" alt="image-20230623145508113" style="zoom:50%;" /></p>
+<h3 id="局部阻力系数和沿程阻力系数"><a href="#局部阻力系数和沿程阻力系数" class="headerlink" title="局部阻力系数和沿程阻力系数"></a>局部阻力系数和沿程阻力系数</h3><h4 id="圆管沿程阻力系数"><a href="#圆管沿程阻力系数" class="headerlink" title="圆管沿程阻力系数"></a>圆管沿程阻力系数</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145653456.png" alt="image-20230623145653456" style="zoom:50%;" /></p>
+<h4 id="新管内壁绝对粗糙度"><a href="#新管内壁绝对粗糙度" class="headerlink" title="新管内壁绝对粗糙度"></a>新管内壁绝对粗糙度</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145751487.png" alt="image-20230623145751487" style="zoom:50%;" /></p>
+<h4 id="管道入口局部阻力系数"><a href="#管道入口局部阻力系数" class="headerlink" title="管道入口局部阻力系数"></a>管道入口局部阻力系数</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623145908311.png" alt="image-20230623145908311" style="zoom:50%;" /></p>
+<h4 id="管道出口局部阻力系数"><a href="#管道出口局部阻力系数" class="headerlink" title="管道出口局部阻力系数"></a>管道出口局部阻力系数</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150405711.png" alt="image-20230623150405711" style="zoom: 67%;" /></p>
+<h4 id="管道扩大处局部阻力系数"><a href="#管道扩大处局部阻力系数" class="headerlink" title="管道扩大处局部阻力系数"></a>管道扩大处局部阻力系数</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150553143.png" alt="image-20230623150553143" style="zoom:50%;" /></p>
+<h4 id="管道缩小处局部阻力系数"><a href="#管道缩小处局部阻力系数" class="headerlink" title="管道缩小处局部阻力系数"></a>管道缩小处局部阻力系数</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150650826.png" alt="image-20230623150650826" style="zoom:50%;" /></p>
+<h4 id="弯管局部阻力系数"><a href="#弯管局部阻力系数" class="headerlink" title="弯管局部阻力系数"></a>弯管局部阻力系数</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150803406.png" alt="image-20230623150803406" style="zoom:50%;" /></p>
+<h4 id="分支管局部阻力系数"><a href="#分支管局部阻力系数" class="headerlink" title="分支管局部阻力系数"></a>分支管局部阻力系数</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623150902441.png" alt="image-20230623150902441"></p>
+<h4 id="交贯钻孔通道局部阻力系数"><a href="#交贯钻孔通道局部阻力系数" class="headerlink" title="交贯钻孔通道局部阻力系数"></a>交贯钻孔通道局部阻力系数</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623151201232.png" alt="image-20230623151201232" style="zoom:50%;" /></p>
+<h4 id="阀口局部阻力系数"><a href="#阀口局部阻力系数" class="headerlink" title="阀口局部阻力系数"></a>阀口局部阻力系数</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623151755576.png" alt="image-20230623151755576" style="zoom:50%;" /></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623152425335.png" alt="image-20230623152425335" style="zoom:50%;" /></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623152504705.png" alt="image-20230623152504705" style="zoom:50%;" /></p>
+<h3 id="小孔流量公式"><a href="#小孔流量公式" class="headerlink" title="小孔流量公式"></a>小孔流量公式</h3><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623153822814.png" alt="image-20230623153822814" style="zoom:50%;" /></p>
+<h3 id="平行平板间缝隙流公式"><a href="#平行平板间缝隙流公式" class="headerlink" title="平行平板间缝隙流公式"></a>平行平板间缝隙流公式</h3><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623153958964.png" alt="image-20230623153958964" style="zoom:50%;" /></p>
+<h3 id="环形缝隙流公式"><a href="#环形缝隙流公式" class="headerlink" title="环形缝隙流公式"></a>环形缝隙流公式</h3><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623154051950.png" alt="image-20230623154051950" style="zoom:50%;" /></p>
+<h3 id="液压冲击公式"><a href="#液压冲击公式" class="headerlink" title="液压冲击公式"></a>液压冲击公式</h3><ol>
+<li><p>迅速关闭或打开液流通道时产生的液压冲击计算公式</p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623154323017.png" alt="image-20230623154323017" style="zoom:50%;" /></p>
+</li>
+<li><p>急剧改变液压缸运动速度时由于液体及运动部件的惯性作用引起的压力冲击公式</p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623154339475.png" alt="image-20230623154339475" style="zoom:50%;" /></p>
+</li>
+</ol>
+<h2 id="3-液压缸"><a href="#3-液压缸" class="headerlink" title="3.液压缸"></a>3.液压缸</h2><blockquote>
+<p>午夜短促，苍穹悠远</p>
+</blockquote>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623163815777.png" alt="image-20230623163815777" style="zoom:50%;" /></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164012721.png" alt="image-20230623164012721" style="zoom:50%;" /></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164246371.png" alt="image-20230623164246371" style="zoom:50%;" /></p>
+<h4 id="允许行程S和计算长度L"><a href="#允许行程S和计算长度L" class="headerlink" title="允许行程S和计算长度L"></a>允许行程S和计算长度L</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164508153.png" alt="image-20230623164508153" style="zoom:50%;" /></p>
+<h4 id="缸筒计算"><a href="#缸筒计算" class="headerlink" title="缸筒计算"></a>缸筒计算</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164832712.png" alt="image-20230623164832712" style="zoom:50%;" /></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164917874.png" alt="image-20230623164917874" style="zoom:50%;" /></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623164957932.png" alt="image-20230623164957932" style="zoom:50%;" /></p>
+<p>缸径推荐尺寸：</p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165056800.png" alt="image-20230623165056800" style="zoom:50%;" /></p>
+<p>缸筒推荐壁厚：</p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165134875.png" alt="image-20230623165134875" style="zoom:50%;" /></p>
+<h4 id="活塞杆计算"><a href="#活塞杆计算" class="headerlink" title="活塞杆计算"></a>活塞杆计算</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165300816.png" alt="image-20230623165300816" style="zoom:50%;" /></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165335097.png" alt="image-20230623165335097" style="zoom:50%;" /></p>
+<h4 id="导向套计算"><a href="#导向套计算" class="headerlink" title="导向套计算"></a>导向套计算</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165454766.png" alt="image-20230623165454766" style="zoom:50%;" /></p>
+<h4 id="缓冲装置计算"><a href="#缓冲装置计算" class="headerlink" title="缓冲装置计算"></a>缓冲装置计算</h4><p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165602800.png" alt="image-20230623165602800" style="zoom:50%;" /><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623165623980.png" alt="image-20230623165623980" style="zoom:50%;" /></p>
+<h2 id="4-液压泵和液压马达"><a href="#4-液压泵和液压马达" class="headerlink" title="4.液压泵和液压马达"></a>4.液压泵和液压马达</h2><blockquote>
+<p>风紧雁行高，无边落木萧萧。楚天魂梦与香消，青山暮暮朝朝</p>
+</blockquote>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623163312720.png" alt="image-20230623163312720" style="zoom:50%;" /></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623163345368.png" alt="image-20230623163345368" style="zoom:50%;" /></p>
+<p><strong>功率扭矩计算公式</strong></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20230623144813900.png" alt="image-20230623144813900" style="zoom: 33%;" /></p>
+
+
+  
+  <script>
+    let tianliGPT_postSelector = '.md-text.content.post';
+    let tianliGPT_key = '5Q5mpqRK5DkwT1X9Gi5e';
+  </script>
+  <script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.9/tianli_gpt.js"></script>
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
+</article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/05/22/hello-world/">Hello World</a></div></section></div>
+
+
+
+
+
+
+  <div class='related-wrap md-text reveal' id="comments">
+    <section class='header cmt-title cap theme'>
+      快来参与讨论吧
+    </section>
+    <section class='body cmt-body waline'>
+      
+
+<div id="waline_container" class="waline_thread"><svg class="loading" style="vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2709"><path d="M832 512c0-176-144-320-320-320V128c211.2 0 384 172.8 384 384h-64zM192 512c0 176 144 320 320 320v64C300.8 896 128 723.2 128 512h64z" p-id="2710"></path></svg></div>
+
+    </section>
+  </div>
+
+
+
+      
+<footer class="page-footer reveal fs12"><hr><div class="sitemap"><div class="sitemap-group"><span class="fs14">博客</span><a href="/">近期</a><a href="/categories/">分类</a><a href="/tags/">标签</a><a href="/archives/">归档</a></div><div class="sitemap-group"><span class="fs14">社交</span><a href="/friends/">友链</a></div><div class="sitemap-group"><span class="fs14">更多</span><a href="/about/">关于本站</a></div></div><div class="text"><p>本站由 <a href="/">@ToBe</a> 使用[hexo]的<a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar">Stellar</a> 主题创建。<br>本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议，转载请注明出处。</p>
+<center>
+<!--不蒜子计数器-->
+<script async src="https://busuanzi.icodeq.com/busuanzi.pure.mini.js "></script>
+<!--添加一个访问量-->
+<span>
+  本"<span style="color: rgb(13, 109, 252); font-weight: bold;">文</ a></span>"
+访问 <span id="busuanzi_value_page_pv" style="color: rgb(13, 109, 252); font-weight: bold;"></span> 次 
+| 👀本站总访问 <span id="busuanzi_value_site_pv" style="color: rgb(13, 109, 252); font-weight: bold;"></span> 次 
+| 🥷本站总访客 <span id="busuanzi_value_site_uv" style="color: rgb(13, 109, 252); font-weight: bold;"></span> 人
+   </span>
+</br>
+</br>
+<script type="text/javascript">
+function show_runtime() {
+    window.setTimeout("show_runtime()", 1000);
+    X = new Date("05/01/2023 00:00:00");
+    Y = new Date();
+    T = (Y.getTime() - X.getTime());
+    M = 24 * 60 * 60 * 1000;
+    a = T / M;
+    A = Math.floor(a);
+    b = (a - A) * 24;
+    B = Math.floor(b);
+    c = (b - B) * 60;
+    C = Math.floor((b - B) * 60);
+    D = Math.floor((c - C) * 60);
+    runtime_span.innerHTML = "⏱️本站已运行 " + A + "天" + B + "小时" + C + "分" + D + "秒"
+}
+show_runtime();
+</script>
+<span id="runtime_span"></span>
+</center>
+</div></footer>
+
+      <div class='float-panel mobile-only blur' style='display:none'>
+  <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
+    <svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="15301"><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 2.3 26.8 24.6 47.5 51.6 47.6h416.5v4z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15302"></path><path d="M566.407 808.3c26.9-0.1 49.3-20.8 51.6-47.6-1.9-27.7-23.9-49.7-51.6-51.6h-412.6c-28.2-1.4-52.6 19.5-55.5 47.6 1.9 27.7 23.9 49.7 51.6 51.6h416.5z m309.3-249.9c26.9-0.1 49.3-20.8 51.6-47.6-2.2-26.8-24.6-47.5-51.6-47.6h-721.9c-27.7-2.8-52.5 17.4-55.3 45.1-0.1 0.8-0.1 1.7-0.2 2.5 0.9 27.2 23.6 48.5 50.7 47.6H875.707z m-103.1-245.9c26.9-0.1 49.3-20.8 51.6-47.6-0.4-28.3-23.2-51.1-51.5-51.6h-618.9c-29.5-1.1-54.3 21.9-55.5 51.4v0.2c1.4 27.8 25.2 49.2 53 47.8 0.8 0 1.7-0.1 2.5-0.2h618.8z" p-id="15303"></path></svg>
+  </button>
+</div>
+
+    </div>
+  </div>
+  <div class='scripts'>
+    <script type="text/javascript">
+  const stellar = {
+    // 懒加载 css https://github.com/filamentgroup/loadCSS
+    loadCSS: (href, before, media, attributes) => {
+      var doc = window.document;
+      var ss = doc.createElement("link");
+      var ref;
+      if (before) {
+        ref = before;
+      } else {
+        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
+        ref = refs[refs.length - 1];
+      }
+      var sheets = doc.styleSheets;
+      if (attributes) {
+        for (var attributeName in attributes) {
+          if (attributes.hasOwnProperty(attributeName)) {
+            ss.setAttribute(attributeName, attributes[attributeName]);
+          }
+        }
+      }
+      ss.rel = "stylesheet";
+      ss.href = href;
+      ss.media = "only x";
+      function ready(cb) {
+        if (doc.body) {
+          return cb();
+        }
+        setTimeout(function () {
+          ready(cb);
+        });
+      }
+      ready(function () {
+        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
+      });
+      var onloadcssdefined = function (cb) {
+        var resolvedHref = ss.href;
+        var i = sheets.length;
+        while (i--) {
+          if (sheets[i].href === resolvedHref) {
+            return cb();
+          }
+        }
+        setTimeout(function () {
+          onloadcssdefined(cb);
+        });
+      };
+      function loadCB() {
+        if (ss.addEventListener) {
+          ss.removeEventListener("load", loadCB);
+        }
+        ss.media = media || "all";
+      }
+      if (ss.addEventListener) {
+        ss.addEventListener("load", loadCB);
+      }
+      ss.onloadcssdefined = onloadcssdefined;
+      onloadcssdefined(loadCB);
+      return ss;
+    },
+
+    // 从 butterfly 和 volantis 获得灵感
+    loadScript: (src, opt) => new Promise((resolve, reject) => {
+      var script = document.createElement('script');
+      if (src.startsWith('/')){
+        src = stellar.config.root + src.substring(1);
+      }
+      script.src = src;
+      if (opt) {
+        for (let key of Object.keys(opt)) {
+          script[key] = opt[key]
+        }
+      } else {
+        // 默认异步，如果需要同步，第二个参数传入 {} 即可
+        script.async = true
+      }
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    }),
+
+    // https://github.com/jerryc127/hexo-theme-butterfly
+    jQuery: (fn) => {
+      if (typeof jQuery === 'undefined') {
+        stellar.loadScript(stellar.plugins.jQuery).then(fn)
+      } else {
+        fn()
+      }
+    }
+  };
+  stellar.version = '1.18.5';
+  stellar.github = 'https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5';
+  stellar.config = {
+    date_suffix: {
+      just: '刚刚',
+      min: '分钟前',
+      hour: '小时前',
+      day: '天前',
+      month: '个月前',
+    },
+    root : '/',
+  };
+
+  // required plugins (only load if needs)
+  stellar.plugins = {
+    jQuery: 'https://gcore.jsdelivr.net/npm/jquery@3.6.2/dist/jquery.min.js'
+  };
+
+  if ('local_search') {
+    stellar.search = {};
+    stellar.search.service = 'local_search';
+    if (stellar.search.service == 'local_search') {
+      let service_obj = Object.assign({}, {"field":"all","path":"/search.json","content":true,"codeblock":true,"sort":"-date"});
+      stellar.search[stellar.search.service] = service_obj;
+    }
+  }
+
+  // stellar js
+  stellar.plugins.stellar = Object.assign({"sites":"/js/plugins/sites.js","friends":"/js/plugins/friends.js","ghinfo":"/js/plugins/ghinfo.js","timeline":"/js/plugins/timeline.js","linkcard":"/js/plugins/linkcard.js","fcircle":"/js/plugins/fcircle.js","weibo":"/js/plugins/weibo.js"});
+
+  stellar.plugins.marked = Object.assign("https://cdn.bootcdn.net/ajax/libs/marked/4.0.18/marked.min.js");
+  // optional plugins
+  if ('true' == 'true') {
+    stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js","transition":"blur"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.swiper = Object.assign({"enable":true,"css":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.css","js":"https://unpkg.com/swiper@8.4.5/swiper-bundle.min.js"});
+  }
+  if ('' == 'true') {
+    stellar.plugins.scrollreveal = Object.assign({"enable":null,"js":"https://gcore.jsdelivr.net/npm/scrollreveal@4.0.9/dist/scrollreveal.min.js","distance":"8px","duration":500,"interval":100,"scale":1});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.preload = Object.assign({"enable":true,"service":"flying_pages","instant_page":"https://gcore.jsdelivr.net/gh/volantis-x/cdn-volantis@4.1.2/js/instant_page.js","flying_pages":"https://gcore.jsdelivr.net/gh/gijo-varghese/flying-pages@2.1.2/flying-pages.min.js"});
+  }
+  if ('true' == 'true') {
+    stellar.plugins.fancybox = Object.assign({"enable":true,"js":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js","css":"https://gcore.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css","selector":".swiper-slide img"});
+  }
+  if ('false' == 'true') {
+    stellar.plugins.heti = Object.assign({"enable":false,"css":"https://unpkg.com/heti@0.9.2/umd/heti.min.css","js":"https://unpkg.com/heti@0.9.2/umd/heti-addon.min.js"});
+  }
+</script>
+
+<!-- required -->
+
+  
+<script src="/js/main.js" async></script>
+
+
+
+<!-- optional -->
+
+  <script>
+  function load_comment(){
+    if(!document.getElementById("waline_container"))return;
+    stellar.loadCSS('https://unpkg.com/@waline/client@v2/dist/waline.css');
+    stellar.loadScript('https://unpkg.com/@waline/client@v2/dist/waline.js', {defer:true}).then(function () {
+      const el = document.getElementById("waline_container");
+      var path = el.getAttribute('comment_id');
+      if (!path) {
+        path = decodeURI(window.location.pathname);
+      }
+      Waline.init(Object.assign({"js":"https://unpkg.com/@waline/client@v2/dist/waline.js","css":"https://unpkg.com/@waline/client@v2/dist/waline.css","serverURL":"https://vercel.settingsun.site/","commentCount":true,"pageview":false,"enable":true,"meta":["mail","link"],"requiredMeta":["nick"],"login":"force","requiredFields":["nick"],"locale":{"placeholder":"千思万绪，落笔汇成评论一句"},"emoji":["https://gcore.jsdelivr.net/gh/norevi/waline-blobcatemojis@1.0/blobs"]}, {
+        el: '#waline_container',
+        path: path,
+        
+      }));
+    });
+  }
+  window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+    load_comment();
+  });
+
+</script>
+
+
+
+
+<!-- inject -->
+
+
+  </div>
+</body>
+</html>
