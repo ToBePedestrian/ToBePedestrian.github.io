@@ -9,7 +9,7 @@
   <meta name="generator" content="Hexo 6.3.0">
   <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.18.5">
   <meta charset="utf-8">
-  <meta name="robots" content="none">
+  
 
   <meta http-equiv='x-dns-prefetch-control' content='on' />
   <link rel='dns-prefetch' href='https://gcore.jsdelivr.net'>
@@ -24,22 +24,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="theme-color" content="#f8f8f8">
   
-  <title>穿越時空的貓</title>
+  <title>阀前补偿与阀后补偿 - 穿越時空的貓</title>
 
   
-    <meta name="description" content="除却君身三尺雪，天下谁人配白衣">
-<meta property="og:type" content="website">
-<meta property="og:title" content="穿越時空的貓">
-<meta property="og:url" content="http://asuraz.top/404.html">
+    <meta name="description" content="阀前补偿与阀后补偿不论是阀前补偿还是阀后补偿,一般都是在负载敏感液压系统中提到；在液压系统中，速度取决于流量，调节节流口的大小从而调节流量，但是如果节流口前后压差变化较大，此时节流口就很难精确的进行流量控制；而压力补偿阀就是用来控制节流口前后的压力差，补偿的就是压差，以保证节流口前后压差保持在某一定值。 阀前补偿     阀前补偿是将压力补偿器布置在液压泵与主阀之间，工作时压力油先经过补偿器再通过">
+<meta property="og:type" content="article">
+<meta property="og:title" content="阀前补偿与阀后补偿">
+<meta property="og:url" content="http://asuraz.top/2024/06/23/%E9%98%80%E5%89%8D%E8%A1%A5%E5%81%BF%E4%B8%8E%E9%98%80%E5%90%8E%E8%A1%A5%E5%81%BF/index.html">
 <meta property="og:site_name" content="穿越時空的貓">
-<meta property="og:description" content="除却君身三尺雪，天下谁人配白衣">
+<meta property="og:description" content="阀前补偿与阀后补偿不论是阀前补偿还是阀后补偿,一般都是在负载敏感液压系统中提到；在液压系统中，速度取决于流量，调节节流口的大小从而调节流量，但是如果节流口前后压差变化较大，此时节流口就很难精确的进行流量控制；而压力补偿阀就是用来控制节流口前后的压力差，补偿的就是压差，以保证节流口前后压差保持在某一定值。 阀前补偿     阀前补偿是将压力补偿器布置在液压泵与主阀之间，工作时压力油先经过补偿器再通过">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231031204547618.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231031201714480.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231030211341345.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231031212138109.png">
+<meta property="og:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231031215613431.png">
+<meta property="article:published_time" content="2024-06-22T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-09-02T08:28:14.613Z">
 <meta property="article:author" content="ToBe">
+<meta property="article:tag" content="液压">
+<meta property="article:tag" content="阀前补偿">
+<meta property="article:tag" content="阀后补偿">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231031204547618.png">
   
   
   
-  
+  <meta name="keywords" content="液压,阀前补偿,阀后补偿">
 
   <!-- feed -->
   
@@ -74,8 +85,10 @@
   
 
 
+
+
   <div class='l_body' id='start'>
-    <aside class='l_left' layout='404'>
+    <aside class='l_left' layout='post'>
     
 
   
@@ -89,38 +102,74 @@
 <div class="widgets">
 <widget class="widget-wrapper search"><div class="widget-body"><div class="search-wrapper" id="search"><form class="search-form"><input type="text" class="search-input" id="search-input" placeholder="站内搜索"><svg t="1670596976048" class="icon search-icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2676" width="200" height="200"><path d="M938.2 832.6L723.8 618.1c-2.5-2.5-5.3-4.4-7.9-6.4 36.2-55.6 57.3-121.8 57.3-193.1C773.3 222.8 614.6 64 418.7 64S64 222.8 64 418.6c0 195.9 158.8 354.6 354.6 354.6 71.3 0 137.5-21.2 193.2-57.4 2 2.7 3.9 5.4 6.3 7.8L832.5 938c14.6 14.6 33.7 21.9 52.8 21.9 19.1 0 38.2-7.3 52.8-21.8 29.2-29.1 29.2-76.4 0.1-105.5M418.7 661.3C284.9 661.3 176 552.4 176 418.6 176 284.9 284.9 176 418.7 176c133.8 0 242.6 108.9 242.6 242.7 0 133.7-108.9 242.6-242.6 242.6" p-id="2677"></path></svg></form><div id="search-result"></div><div class="search-no-result">没有找到内容！</div></div></div></widget>
 
-<widget class="widget-wrapper markdown"><div class="widget-header cap theme dis-select"><span class="name">大雪迷人眼，千山匿归鸿</span></div><div class="widget-body fs14"><p>世界上存在两种万恶根源，那就是急躁与怠惰！</p>
-</div></widget>
 
-<widget class="widget-wrapper recent"><div class="widget-header cap theme dis-select"><span class="name">最近更新</span></div><div class="widget-body related-posts fs14"><a class="item title" href="/2024/08/20/%E6%B6%B2%E5%8E%8B%E5%8D%95%E7%A8%B3%E9%98%80/"><span class="title">液压单稳阀</span></a><a class="item title" href="/2024/07/14/%E6%B6%B2%E5%8E%8B%E6%B5%81%E9%87%8F%E4%BC%98%E5%85%88%E9%98%80/"><span class="title">流量优先阀</span></a><a class="item title" href="/2024/06/24/%E6%B6%B2%E5%8E%8B%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E6%B1%87%E6%80%BB/"><span class="title">液压常用公式汇总</span></a><a class="item title" href="/2024/06/23/%E9%98%80%E5%89%8D%E8%A1%A5%E5%81%BF%E4%B8%8E%E9%98%80%E5%90%8E%E8%A1%A5%E5%81%BF/"><span class="title">阀前补偿与阀后补偿</span></a><a class="item title" href="/2024/08/20/%E4%BA%8C%E9%80%9A%E6%8F%92%E8%A3%85%E9%98%80/"><span class="title">二通插装阀</span></a></div></widget>
+<widget class="widget-wrapper toc single" id="data-toc"><div class="widget-header cap dis-select"><span class="name">阀前补偿与阀后补偿</span></div><div class="widget-body fs14"><div class="doc-tree active"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%98%80%E5%89%8D%E8%A1%A5%E5%81%BF%E4%B8%8E%E9%98%80%E5%90%8E%E8%A1%A5%E5%81%BF"><span class="toc-text">阀前补偿与阀后补偿</span></a></li></ol></div></div></widget>
 
 
 </div>
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" href="https://github.com/ToBePedestrian/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/social/github.jpg"/></a><a class="social" href="https://music.163.com/" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/social/wyy.jpg"/></a><a class="social" href="https://gitee.com/BlackCatTango" target="_blank" rel="external nofollow noopener noreferrer"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="/assets/social/gitee.jpg"/></a></div></footer>
 
     </aside>
-    <div class='l_main list'>
+    <div class='l_main'>
       
 
       
-<article class='md-text error-page'>
-  <h1><img id='error' src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.4/404/1c830bfcd517d.svg' alt='404'></h1>
-  <p class='what'>
-    <strong>
-      很抱歉，您访问的页面不存在
-    </strong>
-  </p>
-  <p class='why'>
-    可能是输入地址有误或该地址已被删除
-  </p>
-  <br><br>
-  <a class='button' id='back' href="/">返回主页</a>
+
+
+
+<div class="bread-nav fs12"><div id="breadcrumb"><a class="cap breadcrumb" href="/">主页</a><span class="sep"></span><a class="cap breadcrumb" href="/">文章</a><span class="sep"></span><a class="cap breadcrumb-link" href="/categories/%E6%B6%B2%E5%8E%8B/">液压</a></div><div id="post-meta">发布于&nbsp;<time datetime="2024-06-22T16:00:00.000Z">2024-06-23</time><br />🔥 阅读: <span id="busuanzi_value_page_pv">-</span></div></div>
+
+<article class='md-text content post'>
+<h1 class="article-title"><span>阀前补偿与阀后补偿</span></h1>
+<h2 id="阀前补偿与阀后补偿"><a href="#阀前补偿与阀后补偿" class="headerlink" title="阀前补偿与阀后补偿"></a>阀前补偿与阀后补偿</h2><p>不论是<code>阀前补偿</code>还是<code>阀后补偿</code>,一般都是在负载敏感液压系统中提到；在液压系统中，<code>速度取决于流量</code>，调节<code>节流口</code>的大小从而调节流量，但是如果节流口前后压差变化较大，此时节流口就很难精确的进行流量控制；而<code>压力补偿阀</code>就是用来控制节流口前后的压力差，补偿的就是<code>压差</code>，以保证节流口前后压差保持在某一定值。</p>
+<p><strong>阀前补偿</strong></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231031204547618.png" alt="image-20231031204547618" style="zoom:50%;" /><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231031201714480.png" alt="image-20231031201714480" style="zoom: 60%;" />  </p>
+<p>阀前补偿是将压力补偿器布置在液压泵与主阀之间，工作时压力油<code>先经过补偿器</code>再通过主阀上节流口，节流口进口压力为：P<sub>进</sub>=P<sub>1</sub>+F<sub>弹</sub>/A，节流口出口压力为：P<sub>出</sub>=P<sub>1</sub>，所以前后压差为ΔP=P<sub>进</sub>-P<sub>出</sub>=F<sub>弹</sub>/A=Constant。</p>
+<p>阀前补偿是<code>阀前减压</code>，利用<code>定差减压阀</code>的阀后压力，使各联主阀前后压差一定,只要每联弹簧设定压力相同，则△P<sub>1</sub>=△P<sub>2</sub>=…=△P<sub>i</sub>;各联负载的流量只与主阀开口面积有关，而不受负载影响，提高了阀的控制性能。 </p>
+<p>阀前补偿回路通过梭阀将每一联的出口压力进行比较，将最大的那一联压力P<sub>max</sub>再反馈给<code>负载敏感泵</code>上的<code>负载敏感阀</code>，然后和负载敏感阀的弹簧设定压力P<sub>x</sub>一起与泵出口压力P<sub>p</sub>进行比较，进而调节泵的排量。所以泵出口压力P<sub>p</sub>=P<sub>max</sub>+P<sub>x</sub>。</p>
+<p>  <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231030211341345.png" alt="image-20231030211341345" style="zoom: 33%;" /></p>
+<p><strong>特点</strong></p>
+<p>当有两个或以上执行元件时，如果主泵提供的流量满足系统所需，则各执行元件按设定速度运行；当主泵提供的流量无法满足系统所需，主泵流量首先给负载小的执行元件提供流量，负载小的执行元件完全满足后才向其他执行元件供油。</p>
+<p><strong>阀后补偿</strong></p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231031212138109.png" alt="image-20231031212138109" style="zoom: 67%;" /></p>
+<p>阀后补偿系统是指压力补偿阀布置在<code>主阀与执行元件之间</code>，工作时压力油先通过主阀上节流口，再通过补偿器;<code>第i联的节流口出口压力为</code>P<sub>i</sub>,最大负载压力为P<sub>max</sub>，补偿阀弹簧设定压力为P<sub>弹</sub>，泵出口压力为P<sub>p</sub>，则有：P<sub>i</sub>=P<sub>max</sub>+P<sub>弹</sub>，如果每联补偿阀弹簧设定力大小相同，则，P<sub>1</sub>=P<sub>2</sub>=P<sub>3</sub>=…；所以节流口前后压差ΔP=P<sub>p</sub>-P<sub>i</sub>,所以有：ΔP<sub>1</sub>=ΔP<sub>2</sub>=ΔP<sub>3</sub>=…。所有节流口前后压差相同，根据节流口流量公式：Q=C<sub>d</sub>A(2ΔP/ρ)½ ,因此流经各节流口的流量与各节流口的开口面积成正比,即Q<sub>1</sub>/Q<sub>2</sub>=A<sub>1</sub>/A<sub>2</sub>。</p>
+<p>负载敏感泵出口压力为：P<sub>p</sub>=P<sub>max</sub>+P<sub>x</sub>（负载敏感阀设定压力），所以多路阀前后压差为P<sub>x</sub>。</p>
+<p> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://qsfx.obs.cn-south-1.myhuaweicloud.com/note/image-20231031215613431.png" alt="image-20231031215613431" style="zoom:50%;" /></p>
+<p><strong>二者特点</strong></p>
+<ol>
+<li>阀前补偿和阀后补偿都是为了使负载运动速度与负载压力无关；</li>
+<li>阀前补偿和阀后补偿补偿器都会能量损耗。</li>
+<li>如果主泵提供的流量无法满足系统所需流量，阀前补偿的情况是：主泵流量优先往负荷小的负载提供流量，当负荷小的负载运动停止后，才往其他的负载提供流量；阀后补偿的情况是：同比减少各个负载的流量供给，使各负载根据主阀开口同比降低速度。</li>
+<li>阀前补偿补偿器设定的各联压差为常值，可以更好的控制负载速度，调速刚性较好；阀后补偿补偿器设定的各联压差相等，并不是常值，调速刚性不是很好，需要泵的压差补偿器共同提高调速刚性。</li>
+<li>当阀后补偿的补偿器设置在回油路上，可应用于负负载的工况，可以更准确控制负载速度，防止吸空和气蚀。</li>
+</ol>
+
+
+  
+  <script>
+    let tianliGPT_postSelector = '.md-text.content.post';
+    let tianliGPT_key = '5Q5mpqRK5DkwT1X9Gi5e';
+  </script>
+  <script src="https://cdn1.tianli0.top/gh/zhheo/Post-Abstract-AI@0.9/tianli_gpt.js"></script>
+
+
+
+
+<div class="article-footer reveal fs14"><section id="license"><div class="header"><span>许可协议</span></div><div class="body"><p>本文采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">署名-非商业性使用-相同方式共享 4.0 国际</a> 许可协议，转载请注明出处。</p>
+</div></section></div>
+
 </article>
+
+<div class="related-wrap reveal" id="read-next"><section class="body"><div class="item" id="prev"><div class="note">较新文章</div><a href="/2024/06/24/%E6%B6%B2%E5%8E%8B%E5%B8%B8%E7%94%A8%E5%85%AC%E5%BC%8F%E6%B1%87%E6%80%BB/">液压常用公式汇总</a></div><div class="item" id="next"><div class="note">较早文章</div><a href="/2023/05/22/hello-world/">Hello World</a></div></section></div>
+
+
+
+
 
 
   <div class='related-wrap md-text reveal' id="comments">
     <section class='header cmt-title cap theme'>
-      
+      快来参与讨论吧
     </section>
     <section class='body cmt-body waline'>
       
